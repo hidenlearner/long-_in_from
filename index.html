@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesome link here  -->
+    <link rel="stylesheet" href="./fontawesome-free-6.1.1-web/css/all.css">
+    <link rel="stylesheet" href="./dist/output.css">
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section>
+        <div id="click-info" class=" max-w-xl [background-color:#f1f1f1;] mx-auto mt-5 pb-5 shadow-md shadow-black">
+            <div class=" bg-white p-2">
+                <h1 class=" font-light text-4xl">Login From</h1>
+                <button id="log-in-btn" class=" border mt-4 px-12 bg-blue-400 text-white font-semibold py-2">Log
+                    In</button>
+            </div>
+            <button id="log-in-btn" class=" border mt-7 ml-2 px-16 py-2 bg-green-500 border-green-300">Source
+                Code</button>
+        </div>
+
+        <div>
+
+            <div id="user-from"
+                class=" [background-color:#f1f1f1] max-w-xl  mx-auto m-10 shadow-xl relative pb-20 scale-0 transition-all duration-200">
+                <div class=" bg-white p-4 border-b border-stone-300 py-10">
+                    <p id="cros-btn" class=" absolute top-0 right-0 p-5 cursor-pointer text-stone-700 text-4xl"><i
+                            class="fa-solid fa-xmark"></i></p>
+                    <div class=" p-3">
+                        <img src="./image/img_avatar2.png" alt="" class=" block w-48 mx-auto rounded-full">
+                    </div>
+                    <form action="">
+                        <label class=" block w-full p-1 font-semibold text-black text-md" for="fname">UserName</label>
+                        <input class=" block w-full border border-slate-300 p-2 font-md" type="text"
+                            placeholder="Enter Username" required>
+                        <label class=" block w-full p-1 font-semibold text-black text-md" for="fname">Password</label>
+                        <input class=" block w-full border border-slate-300 p-2 font-md" type="password"
+                            placeholder="Enter Password" required>
+                        <button
+                            class=" block w-full border bg-green-500 p-2 mt-2 text-md text-white font-bold hover:bg-slate-200 hover:text-black">Log
+                            in</button>
+                        <p class=" p-1 capitalize"> <input type="checkbox" name="" id=""> remember me</p>
+                    </form>
+                </div>
+
+                <button class=" absolute left-0 bottom-0 px-5 py-2 text-white bg-red-500 border m-3">Cancel</button>
+                <p class=" absolute bottom-0 right-0 p-3 mr-5 mb-1">forget <a class=" hover:text-blue underline"
+                        href="#">password?</a></p>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class=" max-w-4xl mx-auto bg-lime-400 p-4">
+        <div class="">
+            <div id="section-btn" class="  bg-stone-300 p-8 relative ">
+                <span class=" absolute left-5 top-5">Section One</span>
+                <span id="plus-icon" class=" absolute right-5 top-4 text-2xl ">+</span>
+            </div>
+            <p id="paragraph" class=" p-3 text-justify bg-stone-100 font-thin text-slate-700 ">Lorem ipsum dolor sit
+                amet, consectetur adipisicing elit. Sapiente amet commodi ducimus neque! Minima
+                pariatur, quisquam quis accusantium totam voluptatem aliquam dolorum eos asperiores veniam atque impedit
+                veritatis. Nobis iure, enim consequuntur sed necessitatibus qui nam alias ipsum vero doloribus
+                perspiciatis doloremque labore quam saepe</p>
+        </div>
+    </section>
+
+    <script>
+        let sectionBtn = document.querySelector('#section-btn');
+        let plusIcon = document.querySelector('#plus-icon');
+        let paragraph = document.querySelector('#paragraph');
+
+        let hiddenCount = 0;
+
+        sectionBtn.addEventListener('click', () => {
+
+            if (hiddenCount === 0) {
+                plusIcon.innerHTML = '-';
+                paragraph.classList.add('hidden');
+                hiddenCount++;
+
+
+            } else if (hiddenCount === 1) {
+                plusIcon.innerHTML = '+';
+                hiddenCount = 0;
+                paragraph.classList.remove('hidden');
+
+            }
+        })
+
+
+
+
+    </script>
+    <script src="index.js"></script>
+</body>
+
+</html>
